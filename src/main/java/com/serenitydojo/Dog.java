@@ -2,13 +2,18 @@ package com.serenitydojo;
 
 public class Dog extends Pet {
     private String favoriteToy;
+    private int age;
+
+    private String play;
     private boolean isFed = false;
 
     public static final String DOG_NOISE = "Woof";
+    public static final String DOG_GAME = "plays with bone";
 
     public Dog(String name, String favoriteToy, int age) {
-        super(name, age);
+        super(name);
         this.favoriteToy = favoriteToy;
+        this.age = age;
     }
 
     public String getFavoriteToy() {
@@ -22,6 +27,9 @@ public class Dog extends Pet {
     public boolean isFed() {
         return isFed;
     }
+    public int getAge(){
+        return age;
+    }
 
     // Exercise 4
     public String makeNoise() {return DOG_NOISE;}
@@ -30,8 +38,8 @@ public class Dog extends Pet {
         this.isFed = true;
     }
 
-    @Override
+//    @Override
     public String play() {
-        return "plays with bone";
+        return DOG_GAME;
     }
 }

@@ -1,13 +1,15 @@
 package com.serenitydojo;
 
 public class Cat extends Pet {
-    private String name;
     private String favoriteToy;
     private int age;
 
+    public static final String CAT_GAME = "plays with string";
+
     public Cat(String name, String favoriteToy, int age) {
-        super(name, age);
+        super(name);
         this.favoriteToy = favoriteToy;
+        this.age = age;
     }
 
     public String getFavoriteToy() {
@@ -18,8 +20,8 @@ public class Cat extends Pet {
         this.favoriteToy = favoriteToy;
     }
 
-    @Override
+//    @Override
     public String play() {
-        return "plays with string";
+        return CAT_GAME;
     }
 }
